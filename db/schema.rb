@@ -12,27 +12,25 @@
 
 ActiveRecord::Schema.define(version: 2022_01_25_150324) do
 
-  create_table "awards", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.integer "year"
-    t.integer "player_id"
-    t.integer "team_id"
-  end
-
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "jersey_number"
-    t.string "height"
-    t.string "weight"
+    t.string "position"
+    t.integer "team_id"
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.float "total_points"
+    t.float "highest_score"
+    t.float "lowest_score"
+    t.float "average_score"
+    t.integer "player_id"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.string "city"
-    t.string "state"
-    t.string "colors"
-    t.integer "first_year"
+    t.string "division"
+    t.integer "str_of_sch"
   end
 
 end

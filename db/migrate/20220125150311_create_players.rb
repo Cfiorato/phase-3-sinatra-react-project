@@ -3,8 +3,8 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
     create_table :players do |t|
       t.string :name
       t.integer :jersey_number
-      t.string :height
-      t.string :weight
+      t.string :position
+      t.integer :team_id
     end
   end
 end
