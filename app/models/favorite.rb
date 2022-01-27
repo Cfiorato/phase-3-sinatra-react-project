@@ -1,3 +1,3 @@
-class favorites < ActiveRecord::Base
+class Favorite < ActiveRecord::Base
   belongs_to :player 
 end

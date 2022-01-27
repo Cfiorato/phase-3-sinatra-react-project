@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_024836) do
+ActiveRecord::Schema.define(version: 2022_01_27_212135) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "player_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_024836) do
     t.string "position"
     t.integer "team_id"
     t.string "img"
+    t.boolean "favorite"
   end
 
   create_table "stats", force: :cascade do |t|
