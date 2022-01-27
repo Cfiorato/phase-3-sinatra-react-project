@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_150324) do
+ActiveRecord::Schema.define(version: 2022_01_27_024836) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "player_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "jersey_number"
     t.string "position"
     t.integer "team_id"
+    t.string "img"
   end
 
   create_table "stats", force: :cascade do |t|
@@ -31,6 +36,8 @@ ActiveRecord::Schema.define(version: 2022_01_25_150324) do
     t.string "name"
     t.string "division"
     t.integer "str_of_sch"
+    t.string "primary"
+    t.string "secondary"
   end
 
 end
