@@ -15,4 +15,5 @@ class PlayerController < ApplicationController
       team_id: params[:team_id]
       img: params[:img]
     )
+  end
 end
