@@ -15,3 +15,4 @@ use Rack::JSONBodyParser
 run ApplicationController
 use PlayerController
 use TeamController
+use FavoriteController
