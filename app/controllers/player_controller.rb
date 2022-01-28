@@ -17,4 +17,10 @@ class PlayerController < ApplicationController
       favorite: false
       )
   end
+
+  patch '/players/:id' do 
+    p = Player.find(params[:id])
+    p.update(favorite: params[:favorite])
+    p.to_json
+  end
 end
